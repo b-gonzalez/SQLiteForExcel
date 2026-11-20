@@ -557,7 +557,7 @@ Private Function ISqlite3_SQLite3Initialize(Optional ByVal libDir As String) As 
         hSQLiteStdCallLibrary = LoadLibrary(libDir + "SQLite3_StdCall.dll")
         If hSQLiteStdCallLibrary = 0 Then
             Debug.Print "SQLite3Initialize Error Loading " + libDir + "SQLite3_StdCall.dll:", Err.LastDllError
-            SQLite3Initialize = SQLITE_INIT_ERROR
+            ISqlite3_SQLite3Initialize = P_SQLITE_INIT_ERROR
             Exit Function
         End If
     End If
